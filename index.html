@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="A trauma-informed, between-session homework for people recovering from coercive control — five gentle practices for reclaiming your own knowing.">
+    <meta name="description" content="A trauma-informed, between-session homework for people recovering from coercive control — seven gentle practices for reclaiming your own knowing.">
     <meta property="og:title" content="Reclaiming Your Own Knowing — Janice LaFountaine, LMFT">
-    <meta property="og:description" content="A trauma-informed, between-session homework for people recovering from coercive control — five gentle practices for reclaiming your own knowing.">
+    <meta property="og:description" content="A trauma-informed, between-session homework for people recovering from coercive control — seven gentle practices for reclaiming your own knowing.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://i.imgur.com/JwAdvDd.png">
     <title>Reclaiming Your Own Knowing — Janice LaFountaine, LMFT</title>
@@ -63,6 +63,16 @@
             height: 2px;
             background-color: var(--color-dusty-rose);
             border-radius: var(--radius-pill);
+        }
+
+        .subsection-heading {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--color-charcoal);
+            margin-top: 1.75rem;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.01em;
         }
 
         .journal-box, .content-box {
@@ -157,6 +167,14 @@
             outline: none;
             border-color: var(--color-dusty-rose);
             box-shadow: 0 0 0 3px rgba(216, 162, 160, 0.25);
+        }
+
+        .prompt-with-input {
+            margin-bottom: 1.25rem;
+        }
+        .prompt-with-input .prompt-text {
+            margin-bottom: 0.5rem;
+            line-height: 1.7;
         }
 
         .btn {
@@ -292,6 +310,19 @@
             opacity: 1 !important;
         }
 
+        .privacy-note {
+            background-color: var(--color-blush-lavender);
+            border: 1px solid var(--color-dusty-rose);
+            border-radius: var(--radius-soft);
+            padding: 0.875rem 1rem;
+            margin-top: 1rem;
+        }
+        .privacy-note p {
+            margin: 0;
+            font-size: 0.875rem;
+            color: var(--color-charcoal);
+        }
+
         .brand-header {
             text-align: center;
             margin-bottom: 2rem;
@@ -303,6 +334,60 @@
             margin: 0 auto 0.75rem;
             border-radius: var(--radius-pill);
             box-shadow: var(--shadow-soft);
+        }
+        .brand-header .practice-name {
+            font-family: var(--font-heading);
+            color: var(--color-charcoal);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        .brand-header .practice-tagline {
+            color: var(--color-slate);
+            font-size: 0.875rem;
+            font-style: italic;
+        }
+        .handout-title-section {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .handout-title-section h1 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            color: var(--color-charcoal);
+            font-size: 2.25rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.01em;
+        }
+        .handout-title-section .handout-subtitle {
+            color: var(--color-slate);
+            font-size: 1.125rem;
+            font-style: italic;
+        }
+
+        .continue-exploring h3 {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--color-charcoal);
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .continue-exploring ul {
+            padding-left: 1.25rem;
+            line-height: 1.8;
+        }
+        .continue-exploring ul li {
+            margin-bottom: 0.5rem;
+        }
+        .continue-exploring a {
+            color: var(--color-charcoal);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            text-decoration-color: var(--color-dusty-rose);
+        }
+        .continue-exploring a:hover {
+            color: var(--color-iris);
         }
 
         label {
@@ -353,7 +438,7 @@
             </p>
 
             <div class="space-y-3">
-                <button onclick="shareViaEmail()" class="share-option" style="background-color: #EFF6FF; color: #1D4ED8;">
+                <button onclick="shareViaEmail()" class="share-option">
                     <span class="icon">📧</span>
                     <div class="content">
                         <div class="title">Email as a Draft</div>
@@ -361,7 +446,7 @@
                     </div>
                 </button>
 
-                <button onclick="copyToClipboard()" class="share-option" style="background-color: #F0FDF4; color: #15803D;">
+                <button onclick="copyToClipboard()" class="share-option">
                     <span class="icon">📋</span>
                     <div class="content">
                         <div class="title">Copy to Clipboard</div>
@@ -369,7 +454,7 @@
                     </div>
                 </button>
 
-                <button onclick="shareViaWebAPI()" class="share-option" id="webShareButton" style="background-color: #FAF5FF; color: #7C3AED; display: none;">
+                <button onclick="shareViaWebAPI()" class="share-option" id="webShareButton" style="display: none;">
                     <span class="icon">🔗</span>
                     <div class="content">
                         <div class="title">Use My Device Sharing</div>
@@ -377,7 +462,7 @@
                     </div>
                 </button>
 
-                <button onclick="downloadFile()" class="share-option" style="background-color: #FFF7ED; color: #C2410C;">
+                <button onclick="downloadFile()" class="share-option">
                     <span class="icon">💾</span>
                     <div class="content">
                         <div class="title">Download as Text File</div>
@@ -386,8 +471,8 @@
                 </button>
             </div>
 
-            <div class="mt-4 p-3 bg-yellow-50 rounded-lg">
-                <p class="text-sm text-yellow-700">
+            <div class="privacy-note">
+                <p>
                     <strong>Privacy Note:</strong> Your reflections contain personal information. Please share thoughtfully and only with trusted individuals.
                 </p>
             </div>
@@ -402,43 +487,45 @@
     <!-- Main Content -->
     <div class="max-w-4xl mx-auto bg-white p-6 sm:p-10 rounded-3xl shadow-2xl border border-gray-100">
 
-        <!-- Action Buttons -->
-        <div class="no-print flex flex-wrap gap-3 mb-6 justify-center sm:justify-end">
-            <button id="shareBtn" onclick="openShareModal()" class="btn bg-purple-100 hover:bg-purple-200 text-purple-800 px-4 py-2 rounded-lg">
-                🔗 Share Reflections
-            </button>
-            <button id="exportBtn" onclick="exportData()" class="btn bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-lg">
-                📥 Export Responses
-            </button>
-            <button id="printBtn" onclick="window.print()" class="btn bg-blue-50 hover:bg-blue-100 text-blue-600 px-4 py-2 rounded-lg">
-                🖨️ Print
-            </button>
-            <button id="clearBtn" onclick="clearData()" class="btn bg-red-50 hover:bg-red-100 text-red-600 px-4 py-2 rounded-lg">
-                🗑️ Clear All
-            </button>
-        </div>
-
-        <!-- Header -->
-        <header class="flex flex-col items-center mb-8 text-center brand-header">
-            <div class="mb-4">
-                <img src="https://i.imgur.com/JwAdvDd.png" alt="Janice LaFountaine, MS, LMFT Logo" class="h-24 w-auto rounded-full shadow-md">
-            </div>
-            <div class="flex-grow">
-                <h1 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-2">Reclaiming Your Own Knowing</h1>
-                <p class="text-gray-600 leading-relaxed text-lg mb-2" style="font-style: italic;">A Between-Session Homework</p>
-            </div>
+        <!-- Brand Header -->
+        <header class="brand-header">
+            <img src="https://i.imgur.com/JwAdvDd.png" alt="Janice LaFountaine, MS, LMFT">
+            <div class="practice-name">Janice LaFountaine, MS, LMFT</div>
+            <div class="practice-tagline">Trauma-informed therapy · Washington &amp; Idaho</div>
         </header>
 
         <!-- Safety Sidebar -->
         <div class="safety-sidebar">
             <p class="safety-label">A note on safety before you begin</p>
             <p style="margin: 0 0 0.75rem;">
-                If you are still inside the relationship or group you're processing, please save this for when you have some external stability — reading reflection prompts while still under someone else's watch can put you at risk, and your body may not yet have the safety it needs to answer them honestly. Bring what's coming up to session instead. If you're out and building, this handout is for you.
+                If you are still inside the relationship or group that's not safe, please save this for when you have some external stability — reading reflection prompts while still under someone else's watch can put you at risk, and your body may not yet have the safety it needs to answer them honestly. Bring what's coming up to session instead. If you're out and building, this handout is for you.
             </p>
             <p style="margin: 0;">
                 One more thing before you start. If the confusion is still thick — if you can't tell what's yours and what was theirs, if your sense of reality keeps wobbling — that's the system working as designed, not evidence of personal failure. You are the expert on your own life. This handout treats you that way.
             </p>
         </div>
+
+        <!-- Action Buttons -->
+        <div class="no-print flex flex-wrap gap-3 mb-6 justify-center sm:justify-end">
+            <button id="shareBtn" onclick="openShareModal()" class="btn btn-primary">
+                🔗 Share Reflections
+            </button>
+            <button id="exportBtn" onclick="exportData()" class="btn btn-ghost">
+                📥 Export Responses
+            </button>
+            <button id="printBtn" onclick="window.print()" class="btn btn-ghost">
+                🖨️ Print
+            </button>
+            <button id="clearBtn" onclick="clearData()" class="btn btn-danger">
+                🗑️ Clear All
+            </button>
+        </div>
+
+        <!-- Handout Title -->
+        <section class="handout-title-section">
+            <h1>Reclaiming Your Own Knowing</h1>
+            <p class="handout-subtitle">A Between-Session Homework</p>
+        </section>
 
         <!-- Intro -->
         <section class="mb-8">
@@ -470,13 +557,31 @@
 
             <div class="journal-box">
                 <p class="text-sm font-semibold text-gray-600 mb-3" style="font-style: italic;">You might notice, without needing to solve anything:</p>
-                <ul class="prompt-list">
-                    <li>What does your chest feel like right now, when you think about the person or the system you're processing?</li>
-                    <li>What does it feel like to imagine making a small choice today that's just for you — no permission asked?</li>
-                    <li>Is there a place in your body that has gone quiet, or numb, or unreachable since you left? What might it be protecting?</li>
-                    <li>When you remember a specific moment you knew something was off — even if you couldn't say so — where in your body does that memory live?</li>
-                    <li>What is one sensation you're noticing right now that you would normally talk yourself out of?</li>
-                </ul>
+
+                <div class="prompt-with-input">
+                    <p class="prompt-text">• What does your chest feel like right now, when you think about the person or the system you're processing?</p>
+                    <textarea class="journal-input" rows="2" data-key="p1-chest-now"></textarea>
+                </div>
+
+                <div class="prompt-with-input">
+                    <p class="prompt-text">• What does it feel like to imagine making a small choice today that's just for you — no permission asked?</p>
+                    <textarea class="journal-input" rows="2" data-key="p1-small-choice"></textarea>
+                </div>
+
+                <div class="prompt-with-input">
+                    <p class="prompt-text">• Is there a place in your body that has gone quiet, or numb, or unreachable since you left? What might it be protecting?</p>
+                    <textarea class="journal-input" rows="2" data-key="p1-quiet-place"></textarea>
+                </div>
+
+                <div class="prompt-with-input">
+                    <p class="prompt-text">• When you remember a specific moment you knew something was off — even if you couldn't say so — where in your body does that memory live?</p>
+                    <textarea class="journal-input" rows="2" data-key="p1-memory-location"></textarea>
+                </div>
+
+                <div class="prompt-with-input">
+                    <p class="prompt-text">• What is one sensation you're noticing right now that you would normally talk yourself out of?</p>
+                    <textarea class="journal-input" rows="2" data-key="p1-sensation-now"></textarea>
+                </div>
             </div>
 
             <div class="callout-box">
@@ -489,11 +594,119 @@
 
         <hr class="divider-gradient">
 
-        <!-- Part 2: The Loaded Words -->
+        <!-- Part 2: The Shape of What Happened to You (NEW — BITE) -->
         <section class="mb-8">
-            <h2 class="text-2xl sm:text-3xl font-semibold section-header">Part 2: The Loaded Words</h2>
+            <h2 class="text-2xl sm:text-3xl font-semibold section-header">Part 2: The Shape of What Happened to You</h2>
             <p class="text-gray-700 leading-relaxed mb-4">
-                Every high-control system has its own language. Steven Hassan calls it <span style="font-style: italic;">loaded language</span> — ordinary words that have been given a second, private meaning inside the system, so that hearing them triggers an automatic response before your thinking mind catches up. A word like <span style="font-style: italic;">obedience</span> may sound neutral to an outsider, but to you it may still land as a small shock of shame, fear, or self-correction.
+                Coercive control isn't one tactic. It's a system. Dr. Steven Hassan, who has spent decades studying high-control groups and relationships, named four dimensions most of these systems operate through — a framework he calls the BITE model: behavior, information, thought, and emotion. Not every system uses every lever with equal force, but most systems use all four.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                Seeing the shape of the thing — even just having the words for it — can interrupt the private story that said this was about me, my weakness, my fault. It wasn't. It was a structure, and you were living inside it.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                You don't need to catalogue every instance. This is an orientation, not an inventory. Read through and notice what your body does.
+            </p>
+
+            <div class="callout-box">
+                <p class="callout-title">The BITE model, at a glance</p>
+                <ul style="margin: 0.5rem 0 0; padding-left: 1.25rem; line-height: 1.8;">
+                    <li><strong>B</strong>ehavior — what you did, who you saw, how you spent time and money</li>
+                    <li><strong>I</strong>nformation — what you were allowed to know or hear</li>
+                    <li><strong>T</strong>hought — the categories, questions, and internal moves you were given</li>
+                    <li><strong>E</strong>motion — which feelings were welcome, which weren't, and the fears that got installed</li>
+                </ul>
+            </div>
+
+            <h3 class="subsection-heading">How behavior got shaped</h3>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                What you wore. Who you saw. Where you went. How you spent money. How much sleep you got. Which of your friendships were allowed to continue and which quietly disappeared. Whether you had to ask permission for ordinary choices. How rewards and consequences arrived — warm one moment, icy the next — to reshape what you did.
+            </p>
+
+            <div class="journal-box">
+                <p class="text-sm font-semibold text-gray-600 mb-3" style="font-style: italic;">You might notice:</p>
+
+                <div class="prompt-with-input">
+                    <p class="prompt-text">• Is there a place in your daily life now where you still ask for permission in your head, even though no one is there to grant or deny it?</p>
+                    <textarea class="journal-input" rows="2" data-key="p2-behavior-permission"></textarea>
+                </div>
+
+                <div class="prompt-with-input">
+                    <p class="prompt-text">• What was the smallest regulated behavior — one that would look trivial from outside — that took the most from you?</p>
+                    <textarea class="journal-input" rows="2" data-key="p2-behavior-smallest"></textarea>
+                </div>
+            </div>
+
+            <h3 class="subsection-heading">How the information you had access to got shaped</h3>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                What was kept from you. What was distorted. Whose perspectives you were allowed to hear, and whose were labeled dangerous, toxic, or unwell. How your history got rewritten in real time. How you came to see the outside world through their frame, because theirs was the only frame you were given.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                This is the dimension that often produces the worst self-blame after leaving — <span style="font-style: italic;">how did I not see it?</span> You didn't see it because you were inside a system designed to prevent you from seeing it. That's not a failure of your intelligence. That's the system working exactly as it was built to work.
+            </p>
+
+            <div class="journal-box">
+                <p class="text-sm font-semibold text-gray-600 mb-3" style="font-style: italic;">You might notice:</p>
+
+                <div class="prompt-with-input">
+                    <p class="prompt-text">• Are there parts of your own story, or the relationship's story, that you suspect you still don't have clear access to?</p>
+                    <textarea class="journal-input" rows="2" data-key="p2-info-story"></textarea>
+                </div>
+
+                <div class="prompt-with-input">
+                    <p class="prompt-text">• Who did you lose contact with — quietly, gradually — that you might want to hear from again now, if only to hear a different version of reality?</p>
+                    <textarea class="journal-input" rows="2" data-key="p2-info-contacts"></textarea>
+                </div>
+            </div>
+
+            <h3 class="subsection-heading">How thinking got shaped</h3>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                The categories you were given — good and bad, safe and dangerous, us and them. The questions that were off-limits. The thought-stopping moves that arrived automatically when doubt began to rise: a prayer, a phrase, a correction, a quick pivot away. A map of reality where only certain conclusions were even possible, so that disagreement felt like insanity rather than information.
+            </p>
+
+            <div class="journal-box">
+                <p class="text-sm font-semibold text-gray-600 mb-3" style="font-style: italic;">You might notice:</p>
+
+                <div class="prompt-with-input">
+                    <p class="prompt-text">• What is a question you weren't allowed to ask inside the system that you'd want to ask now?</p>
+                    <textarea class="journal-input" rows="2" data-key="p2-thought-question"></textarea>
+                </div>
+
+                <div class="prompt-with-input">
+                    <p class="prompt-text">• When a doubt begins to rise in you today, what's the first internal move you make? Whose voice is that move in?</p>
+                    <textarea class="journal-input" rows="2" data-key="p2-thought-doubt-move"></textarea>
+                </div>
+            </div>
+
+            <h3 class="subsection-heading">How emotions got shaped</h3>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                Which feelings were permitted, and which were treated as evidence of something wrong with you. The sudden swings between warmth and withdrawal that kept your nervous system oriented toward them. The guilt that showed up faster than thought. And the installed fears — about leaving, about questioning, about consequences — so precise and so catastrophic they could stop you from moving before you'd finished the thought.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                Hassan calls this last one <span style="font-style: italic;">phobia indoctrination</span>: not ordinary fear, but carefully engineered fear about what will happen if you step outside the system. These fears can outlast the system by years. They are often the last thing to leave. Noticing a catastrophic thought and gently asking <span style="font-style: italic;">whose fear is this?</span> is slow work, but it's work that belongs to you now.
+            </p>
+
+            <div class="journal-box">
+                <p class="text-sm font-semibold text-gray-600 mb-3" style="font-style: italic;">You might notice:</p>
+
+                <div class="prompt-with-input">
+                    <p class="prompt-text">• Which feelings were welcome inside the system, and which weren't?</p>
+                    <textarea class="journal-input" rows="2" data-key="p2-emotion-welcome"></textarea>
+                </div>
+
+                <div class="prompt-with-input">
+                    <p class="prompt-text">• Is there a specific fear about having left — about consequences, about being wrong, about being punished by something — that arrives uninvited? When you look at it directly, does it feel shaped like the voice of the system, or like a voice of your own?</p>
+                    <textarea class="journal-input" rows="3" data-key="p2-emotion-fear"></textarea>
+                </div>
+            </div>
+        </section>
+
+        <hr class="divider-gradient">
+
+        <!-- Part 3: The Loaded Words (was Part 2) -->
+        <section class="mb-8">
+            <h2 class="text-2xl sm:text-3xl font-semibold section-header">Part 3: The Loaded Words</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                Every high-control system has its own language. Steven Hassan calls it <span style="font-style: italic;">loaded language</span> — ordinary words that have been given a second, private meaning inside the system, so that hearing them activates an automatic response before your thinking mind catches up. A word like <span style="font-style: italic;">obedience</span> may sound neutral to an outsider, but to you it may still land as a small shock of shame, fear, or self-correction.
             </p>
             <p class="text-gray-700 leading-relaxed mb-4">
                 Reclaiming your knowing includes reclaiming your language. Not rejecting every word the system used, but getting to choose again what a word means in the life you're authoring now.
@@ -501,12 +714,26 @@
 
             <div class="journal-box">
                 <p class="text-sm font-semibold text-gray-600 mb-3" style="font-style: italic;">You might notice:</p>
-                <ul class="prompt-list">
-                    <li>Name up to three words or phrases from the system that still activate shame, fear, or self-doubt when you encounter them.</li>
-                    <li>For each one — what did that word mean <span style="font-style: italic;">inside</span> the system? Who decided its meaning?</li>
-                    <li>What might the same word mean to a neutral speaker — a friend, a stranger, someone who has never been inside what you've been inside?</li>
-                    <li>Is there a version of that word you'd be willing to keep, on your own terms? Or is it a word you'd rather set down for a while?</li>
-                </ul>
+
+                <div class="prompt-with-input">
+                    <p class="prompt-text">• Name up to three words or phrases from the system that still activate shame, fear, or self-doubt when you encounter them.</p>
+                    <textarea class="journal-input" rows="3" data-key="p3-loaded-words"></textarea>
+                </div>
+
+                <div class="prompt-with-input">
+                    <p class="prompt-text">• For each one — what did that word mean <span style="font-style: italic;">inside</span> the system? Who decided its meaning?</p>
+                    <textarea class="journal-input" rows="3" data-key="p3-inside-meaning"></textarea>
+                </div>
+
+                <div class="prompt-with-input">
+                    <p class="prompt-text">• What might the same word mean to a neutral speaker — a friend, a stranger, someone who has never been inside what you've been inside?</p>
+                    <textarea class="journal-input" rows="3" data-key="p3-neutral-meaning"></textarea>
+                </div>
+
+                <div class="prompt-with-input">
+                    <p class="prompt-text">• Is there a version of that word you'd be willing to keep, on your own terms? Or is it a word you'd rather set down for a while?</p>
+                    <textarea class="journal-input" rows="3" data-key="p3-reclaim-or-set-down"></textarea>
+                </div>
             </div>
 
             <div class="callout-box">
@@ -526,12 +753,15 @@
 
         <hr class="divider-gradient">
 
-        <!-- Part 3: Authentic vs. Conditioned -->
+        <!-- Part 4: Authentic vs. Conditioned (was Part 3) -->
         <section class="mb-8">
-            <h2 class="text-2xl sm:text-3xl font-semibold section-header">Part 3: Authentic vs. Conditioned</h2>
+            <h2 class="text-2xl sm:text-3xl font-semibold section-header">Part 4: Authentic vs. Conditioned</h2>
             <p class="text-gray-700 leading-relaxed mb-4">
                 In coercive systems, conditioned responses feel like moral truth. The reaction arrives fast — certain, absolute, and laced with a fear of consequences that may not exist anymore. After leaving, one of the most disorienting parts of healing is not knowing which of your reactions are <span style="font-style: italic;">yours</span> and which were installed.
                 It can feel like you don't know yourself at all. That's not a failure. It's what happens when a system is removed and the scaffolding it built inside you is still there.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                If there's a period where you feel you don't know who you are anymore — not in the poetic sense, but in a genuinely unmooring way, a kind of catastrophic collapse of the self you were inside the system — that is not a failure. It's a precondition. The identity you built in there is being released, and the authentic self is returning, late and real. The void between the two is expected, protective, and temporary. Some people call it a <span style="font-style: italic;">dark night of the self</span>. It is a passage, not a verdict.
             </p>
             <p class="text-gray-700 leading-relaxed mb-4">
                 You don't have to sort all of this out at once. You can just start to notice, without self-blame, when a <span style="font-style: italic;">should</span> shows up, and gently ask: <span style="font-style: italic;">whose voice is this?</span>
@@ -542,12 +772,26 @@
 
             <div class="journal-box">
                 <p class="text-sm font-semibold text-gray-600 mb-3" style="font-style: italic;">You might notice:</p>
-                <ul class="prompt-list">
-                    <li>Think of a recent moment a strong <span style="font-style: italic;">should</span> showed up — about your body, your choices, your day, your relationships. Whose voice does it sound like?</li>
-                    <li>When you imagine not doing that <span style="font-style: italic;">should</span>, what happens in your body? Does it tighten, or does something in you quietly open?</li>
-                    <li>Is there a preference, a taste, a small want you're aware of right now that would have been discouraged or punished inside the system? What does it feel like to let yourself notice it?</li>
-                    <li>Where in your life do you already know, clearly, what is yours? (It might be small. It counts.)</li>
-                </ul>
+
+                <div class="prompt-with-input">
+                    <p class="prompt-text">• Think of a recent moment a strong <span style="font-style: italic;">should</span> showed up — about your body, your choices, your day, your relationships. Whose voice does it sound like?</p>
+                    <textarea class="journal-input" rows="3" data-key="p4-should-voice"></textarea>
+                </div>
+
+                <div class="prompt-with-input">
+                    <p class="prompt-text">• When you imagine not doing that <span style="font-style: italic;">should</span>, what happens in your body? Does it tighten, or does something in you quietly open?</p>
+                    <textarea class="journal-input" rows="2" data-key="p4-body-response"></textarea>
+                </div>
+
+                <div class="prompt-with-input">
+                    <p class="prompt-text">• Is there a preference, a taste, a small want you're aware of right now that would have been discouraged or punished inside the system? What does it feel like to let yourself notice it?</p>
+                    <textarea class="journal-input" rows="3" data-key="p4-preference"></textarea>
+                </div>
+
+                <div class="prompt-with-input">
+                    <p class="prompt-text">• Where in your life do you already know, clearly, what is yours? (It might be small. It counts.)</p>
+                    <textarea class="journal-input" rows="2" data-key="p4-already-know"></textarea>
+                </div>
             </div>
 
             <div class="callout-box">
@@ -565,9 +809,9 @@
 
         <hr class="divider-gradient">
 
-        <!-- Part 4: Small Acts of Sovereignty -->
+        <!-- Part 5: Small Acts of Sovereignty (was Part 4) -->
         <section class="mb-8">
-            <h2 class="text-2xl sm:text-3xl font-semibold section-header">Part 4: Small Acts of Sovereignty</h2>
+            <h2 class="text-2xl sm:text-3xl font-semibold section-header">Part 5: Small Acts of Sovereignty</h2>
             <p class="text-gray-700 leading-relaxed mb-4">
                 Autonomy does not return in one grand gesture. It returns in a thousand small choices you make, purely for yourself, in the ordinary moments of a day. The drink you actually want. The <span style="font-style: italic;">no</span> you say without a paragraph of justification. The ten minutes you linger somewhere with no productive reason.
             </p>
@@ -577,15 +821,40 @@
             <p class="text-gray-700 leading-relaxed mb-4">
                 For some readers, this work is explicitly financial — opening your own account, making a purchase without asking, checking a balance you weren't allowed to see. Financial coercion (controlled access, permission for purchases, sabotaged employment, hidden debts) leaves its own kind of scaffolding inside. Rebuilding there is not about spreadsheets. It is about remembering that resources were never meant to be a leash.
             </p>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                There is another quiet form of sovereignty worth naming here. Deb Dana, who teaches about the nervous system, calls them <span style="font-style: italic;">glimmers</span> — micro-moments when your body briefly registers that it is safe. A warm cup held in both hands. A shaft of sunlight across the floor. A pet settling against your leg. The particular way someone you trust says your name. None of these are dramatic. That's the point.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                A dysregulated nervous system doesn't learn safety from being told it's safe. It learns safety from noticing, slowly and repeatedly, that it is safe <span style="font-style: italic;">now</span>. Noticing one glimmer today — one small moment where your system registered <span style="font-style: italic;">safe</span> — is a form of reclaiming your attention from threat-scanning. It is a small act of sovereignty too.
+            </p>
 
             <div class="journal-box">
                 <p class="text-sm font-semibold text-gray-600 mb-3" style="font-style: italic;">You might notice:</p>
-                <ul class="prompt-list">
-                    <li>What was one small choice you made today that was just for you? What did it feel like in your body?</li>
-                    <li>Did any resistance come up — a voice saying it was selfish, wasteful, too much? Whose voice was it?</li>
-                    <li>Is there a choice you could make tomorrow, no bigger than a drink or a yes or a no, that would belong only to you?</li>
-                    <li>What does it feel like to imagine that no one is keeping score of these choices anymore?</li>
-                </ul>
+
+                <div class="prompt-with-input">
+                    <p class="prompt-text">• What was one small choice you made today that was just for you? What did it feel like in your body?</p>
+                    <textarea class="journal-input" rows="2" data-key="p5-small-choice"></textarea>
+                </div>
+
+                <div class="prompt-with-input">
+                    <p class="prompt-text">• Did any resistance come up — a voice saying it was selfish, wasteful, too much? Whose voice was it?</p>
+                    <textarea class="journal-input" rows="2" data-key="p5-resistance-voice"></textarea>
+                </div>
+
+                <div class="prompt-with-input">
+                    <p class="prompt-text">• Is there a choice you could make tomorrow, no bigger than a drink or a yes or a no, that would belong only to you?</p>
+                    <textarea class="journal-input" rows="2" data-key="p5-tomorrow-choice"></textarea>
+                </div>
+
+                <div class="prompt-with-input">
+                    <p class="prompt-text">• What does it feel like to imagine that no one is keeping score of these choices anymore?</p>
+                    <textarea class="journal-input" rows="2" data-key="p5-no-score"></textarea>
+                </div>
+
+                <div class="prompt-with-input">
+                    <p class="prompt-text">• What is one small glimmer you noticed today — a micro-moment of ease, warmth, or safety that your nervous system registered?</p>
+                    <textarea class="journal-input" rows="3" data-key="p5-glimmer-today"></textarea>
+                </div>
             </div>
 
             <div class="callout-box">
@@ -608,9 +877,9 @@
 
         <hr class="divider-gradient">
 
-        <!-- Part 5: The Bond Wasn't a Flaw -->
+        <!-- Part 6: The Bond Wasn't a Flaw (was Part 5) -->
         <section class="mb-8">
-            <h2 class="text-2xl sm:text-3xl font-semibold section-header">Part 5: The Bond Wasn't a Flaw</h2>
+            <h2 class="text-2xl sm:text-3xl font-semibold section-header">Part 6: The Bond Wasn't a Flaw</h2>
             <p class="text-gray-700 leading-relaxed mb-4">
                 One of the most disorienting parts of leaving is how much you still miss them. The tenderness shows up uninvited. A song, a smell, a particular quality of evening light, and suddenly you're aching for a person — or a community, or a life — that you know was not safe for you. It can make you doubt everything: your leaving, your knowing, your sanity.
             </p>
@@ -623,11 +892,21 @@
 
             <div class="journal-box">
                 <p class="text-sm font-semibold text-gray-600 mb-3" style="font-style: italic;">You might notice, without needing to analyze or resolve anything:</p>
-                <ul class="prompt-list">
-                    <li>When missing them shows up, what does it feel like in your body — where does it live, how does it move?</li>
-                    <li>What specifically are you missing in this moment? (A person, a version of them, a version of yourself, a sense of belonging, a rhythm, a role — anything is allowed.)</li>
-                    <li>If this missing were allowed to simply be here, without deciding anything about what it means, what would it need — a breath, a walk, a witness, a good cry, nothing at all?</li>
-                </ul>
+
+                <div class="prompt-with-input">
+                    <p class="prompt-text">• When missing them shows up, what does it feel like in your body — where does it live, how does it move?</p>
+                    <textarea class="journal-input" rows="3" data-key="p6-missing-body"></textarea>
+                </div>
+
+                <div class="prompt-with-input">
+                    <p class="prompt-text">• What specifically are you missing in this moment? (A person, a version of them, a version of yourself, a sense of belonging, a rhythm, a role — anything is allowed.)</p>
+                    <textarea class="journal-input" rows="3" data-key="p6-missing-what"></textarea>
+                </div>
+
+                <div class="prompt-with-input">
+                    <p class="prompt-text">• If this missing were allowed to simply be here, without deciding anything about what it means, what would it need — a breath, a walk, a witness, a good cry, nothing at all?</p>
+                    <textarea class="journal-input" rows="3" data-key="p6-missing-need"></textarea>
+                </div>
             </div>
 
             <div class="callout-box">
@@ -640,24 +919,41 @@
 
         <hr class="divider-gradient">
 
-        <!-- Part 6: Non-Linear Permission -->
+        <!-- Part 7: Non-Linear Permission (was Part 6) -->
         <section class="mb-8">
-            <h2 class="text-2xl sm:text-3xl font-semibold section-header">Part 6: Non-Linear Permission</h2>
+            <h2 class="text-2xl sm:text-3xl font-semibold section-header">Part 7: Non-Linear Permission</h2>
             <p class="text-gray-700 leading-relaxed mb-4">
                 Healing from coercive control is not a staircase. You will loop. You will have a week of strong, grounded knowing — and then a day that feels like the ground has gone out from under you, and you cannot remember why you left. Those days are not regression. They are often the body processing something it wasn't safe to feel before, surfacing now because you finally have the stability to hold it.
             </p>
             <p class="text-gray-700 leading-relaxed mb-4">
                 You are allowed to loop. You are allowed to grieve in pieces. You are allowed to not be done.
             </p>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                You may also find yourself grieving the version of you who never got to exist inside that system — the one whose time, choices, attention, and growth belonged to someone else. They are not lost. They are arriving now, late and real. Part of the work is letting them in without rushing to make up for the years.
+            </p>
 
             <div class="journal-box">
                 <p class="text-sm font-semibold text-gray-600 mb-3" style="font-style: italic;">You might notice:</p>
-                <ul class="prompt-list">
-                    <li>Think of the most recent hard day — the one that felt like going backward. Looking at it now, what might your body or heart have actually been processing?</li>
-                    <li>Were you being unkind to yourself on that day, or were you tender with it? What would tender look like next time?</li>
-                    <li>What do you still miss about the system, the person, or the life you left? (Missing is not the same as wanting to return.)</li>
-                    <li>What permission do you most need to give yourself right now — and who would you be if you gave it?</li>
-                </ul>
+
+                <div class="prompt-with-input">
+                    <p class="prompt-text">• Think of the most recent hard day — the one that felt like going backward. Looking at it now, what might your body or heart have actually been processing?</p>
+                    <textarea class="journal-input" rows="3" data-key="p7-hard-day-processing"></textarea>
+                </div>
+
+                <div class="prompt-with-input">
+                    <p class="prompt-text">• Were you being unkind to yourself on that day, or were you tender with it? What would tender look like next time?</p>
+                    <textarea class="journal-input" rows="3" data-key="p7-tender-look"></textarea>
+                </div>
+
+                <div class="prompt-with-input">
+                    <p class="prompt-text">• What do you still miss about the system, the person, or the life you left? (Missing is not the same as wanting to return.)</p>
+                    <textarea class="journal-input" rows="3" data-key="p7-still-miss"></textarea>
+                </div>
+
+                <div class="prompt-with-input">
+                    <p class="prompt-text">• What permission do you most need to give yourself right now — and who would you be if you gave it?</p>
+                    <textarea class="journal-input" rows="3" data-key="p7-permission-needed"></textarea>
+                </div>
             </div>
 
             <div class="callout-box">
@@ -705,9 +1001,49 @@
             <p style="margin: 0.75rem 0 0; font-style: italic; color: #8B909A;">Reaching out for help is a sign of strength, not weakness.</p>
         </div>
 
+        <hr class="divider-gradient">
+
+        <!-- Continue Exploring -->
+        <section class="continue-exploring mb-8">
+            <h2 class="text-2xl sm:text-3xl font-semibold section-header">Continue Exploring</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                These are some of the voices that have been companions to this work. None of them is homework. Take what serves. Leave what doesn't.
+            </p>
+
+            <h3>Books</h3>
+            <ul>
+                <li><span style="font-style: italic;">Coercive Control: How Men Entrap Women in Personal Life</span> by Evan Stark — the text that named what you lived as a liberty crime rather than a private failing. Academic in places, but foundational.</li>
+                <li><span style="font-style: italic;">Why Does He Do That? Inside the Minds of Angry and Controlling Men</span> by Lundy Bancroft — the most accessible map of the inner logic of controlling partners. Plain-spoken, grounding, not academic.</li>
+                <li><span style="font-style: italic;">The Body Keeps the Score</span> by Bessel van der Kolk — the neurobiology of how trauma lives in the body and how healing moves through it. Long and heavy in places; best read when you have some containment around it.</li>
+                <li><span style="font-style: italic;">The Betrayal Bond: Breaking Free of Exploitive Relationships</span> by Patrick Carnes — on the specific biology of bonds forged through cycles of fear and tenderness, and what unhooks them over time.</li>
+                <li><span style="font-style: italic;">Freedom of Mind: Helping Loved Ones Leave Controlling People, Cults and Beliefs</span> by Steven Hassan — built around the BITE framework you'll recognize from Part 2. Written for families, but often most useful for the person who has already left.</li>
+            </ul>
+
+            <h3>From Collaborating Wellness</h3>
+            <ul>
+                <li><a href="https://www.collaboratingwellness.com/current-topics/the-invisible-prison-coercive-control">The Invisible Prison: Coercive Control</a> — the cluster parent for the patterns named here</li>
+                <li><a href="https://www.collaboratingwellness.com/current-topics/is-it-really-trauma-bonding">Is It Really Trauma Bonding?</a> — what Part 6 opens up</li>
+                <li><a href="https://www.collaboratingwellness.com/current-topics/financial-coercion-the-blueprint-of-covert-abuse">Financial Coercion: The Blueprint</a> — if money control is part of your story</li>
+                <li><a href="https://www.collaboratingwellness.com/services/coercive-control-recovery">Coercive Control Recovery</a> — if you're ready to work with support</li>
+            </ul>
+
+            <p style="margin-top: 1.5rem; font-style: italic; color: var(--color-slate); text-align: center;">Go at the pace your soul can hold.</p>
+        </section>
+
+        <!-- DV Support Resources (distinct from acute crisis block above) -->
+        <div class="callout-box" style="border-color: var(--color-dusty-rose);">
+            <p class="callout-title">If you need support right now</p>
+            <ul style="margin: 0.5rem 0 0; padding-left: 1.25rem; line-height: 1.8;">
+                <li><strong>National Domestic Violence Hotline</strong> — call <strong>1-800-799-7233</strong> · chat <a href="https://www.thehotline.org">thehotline.org</a>. Available twenty-four hours a day, free, confidential, in more than two hundred languages.</li>
+                <li><strong>YWCA Spokane 24-Hour Helpline</strong> — call <strong>509-326-2255</strong>. For clients in Washington.</li>
+                <li><strong>Safe Passage (North Idaho)</strong> — call <strong>208-664-9303</strong>. For clients in Idaho.</li>
+            </ul>
+            <p style="margin: 0.75rem 0 0; font-style: italic; color: var(--color-slate);">You do not have to do this alone.</p>
+        </div>
+
         <!-- Unified Closing Line -->
         <p style="text-align: center; margin-top: 2rem; font-style: italic; color: #8B909A; font-size: 0.95rem;">
-            Use what resonates, leave what doesn't, and bring whatever surfaces to our next session.
+            Use what resonates, leave what doesn't, and bring whatever surfaces to our next session. You don't have to carry this alone.
         </p>
 
     </div>
@@ -725,7 +1061,7 @@
 
             // Show web share button if supported
             if (navigator.share) {
-                document.getElementById('webShareButton').style.display = 'block';
+                document.getElementById('webShareButton').style.display = 'flex';
             }
 
             // Event listeners for buttons
